@@ -11,8 +11,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: pull-request-action
-        uses: vsoch/pull-request-action@add/support-null-branch
+        uses: vsoch/pull-request-action@add/assignees
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH_PREFIX: "update/"
           PULL_REQUEST_BRANCH: "master"
+          MAINTAINER_CAN_MODIFY: false
+          PULL_REQUEST_ASSIGNEES: vsoch
