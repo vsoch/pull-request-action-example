@@ -16,5 +16,5 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH_PREFIX: "update/"
           PULL_REQUEST_BRANCH: "master"
-          MAINTAINER_CAN_MODIFY: false
+          MAINTAINER_CANT_MODIFY: true
           PULL_REQUEST_ASSIGNEES: vsoch
