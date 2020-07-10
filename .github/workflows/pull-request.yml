@@ -1,6 +1,5 @@
 name: Pull Request on Branch Push
 on:
-  pull_request: []
   push:
     branches-ignore:
       - staging
