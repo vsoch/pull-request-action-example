@@ -11,8 +11,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: pull-request-action
-        uses: vsoch/pull-request-action@master
+        uses: quodlibetor/pull-request-action@fail-curl
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH_PREFIX: "update/"
           PULL_REQUEST_BRANCH: "master"
+      - name: pull-request-action-fail-curl
+        uses: quodlibetor/pull-request-action@fail-curl
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH_PREFIX: "update/"
+          PULL_REQUEST_BRANCH: "master"
+          FAIL_ON_ERROR: 'yup'
